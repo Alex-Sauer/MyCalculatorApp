@@ -14,24 +14,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, Solve.class);
-        intent.putExtra("NAME", solve());
-        startActivity(intent);
     }
 
-    public Integer solve(int a){
-        if(a==1){
+//    public Integer solve(int button, int numOne, int numTwo){
+//
+//    }
 
-        }else if(a==2){
-
-        }else if(a==3){
-
-        }else if(a==4){
-
-        }
-    }
-
-    public void switchScreens(View view){
+    public void solve(View view){
         Intent intent = getIntent();
         String nameToShow = intent.getStringExtra("");
         TextView topTxt = findViewById(R.id.topText);
@@ -40,6 +29,21 @@ public class MainActivity extends AppCompatActivity {
         String botNum = botTxt.getText().toString();
         int num1= Integer.parseInt(topNum);
         int num2= Integer.parseInt(botNum);
+        int total;
+        total = num1+num2;
+//        if (){
+//            //add
+//            total = num1+num2;
+//        }else if (){
+//            //sub
+//        }else if(){
+//            //mult
+//        }else{
+//            //div
+//        }
+
+        String wordTotal = ("" + total);
+
     }
 
 }

@@ -14,8 +14,9 @@ public class Solve extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solve);
         Intent intent = getIntent();
-        String nameToShow = intent.getStringExtra("SOLVE");
+        String total = intent.getStringExtra("SOLVE");
         TextView textView = findViewById(R.id.textView);
-        textView.setText(nameToShow);
+        textView.setText(total);
+
     }
 }
