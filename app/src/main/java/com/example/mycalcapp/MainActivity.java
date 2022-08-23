@@ -15,11 +15,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-//    public Integer solve(int button, int numOne, int numTwo){
-//
-//    }
-
+    int operation = 5;
+    int total=0;
+    public void add (View view){
+        operation=1;
+        solve(view);
+    }
+    public void sub (View view){
+        operation=2;
+        solve(view);
+    }
+    public void multiply (View view){
+        operation=2;
+        solve(view);
+    }
+    public void divide (View view){
+        operation=2;
+        solve(view);
+    }
     public void solve(View view){
         Intent intent = getIntent();
         String nameToShow = intent.getStringExtra("");
@@ -29,21 +42,21 @@ public class MainActivity extends AppCompatActivity {
         String botNum = botTxt.getText().toString();
         int num1= Integer.parseInt(topNum);
         int num2= Integer.parseInt(botNum);
-        int total;
-        total = num1+num2;
-//        if (){
-//            //add
-//            total = num1+num2;
-//        }else if (){
-//            //sub
-//        }else if(){
-//            //mult
-//        }else{
-//            //div
-//        }
+        if (operation==1){
+            //add
+            total = num1+num2;
+        }
+        else if (operation==2) {
+            total = num1-num2;
+        }else if(operation==3){
+            total = num1*num2;
+        }else{
+            total = num1/num2;
+        }
 
         String wordTotal = ("" + total);
-
+        EditText editText = (EditText) findViewById(R.id.answerBox);
+        editText.setText(wordTotal);//set the text in edit text
     }
 
 }
