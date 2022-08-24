@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7DAF8"
     tools:context=".MainActivity">
 
     <Button
@@ -22,8 +22,8 @@
         android:id="@+id/subtract"
         android:layout_width="63dp"
         android:layout_height="49dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="340dp"
         android:onClick="sub"
         android:text="-"
         android:textSize="20sp"
@@ -34,9 +34,8 @@
         android:id="@+id/add"
         android:layout_width="63dp"
         android:layout_height="49dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="220dp"
-
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="152dp"
         android:onClick="add"
         android:text="+"
         android:textSize="20sp"
@@ -47,8 +46,8 @@
         android:id="@+id/multiply"
         android:layout_width="63dp"
         android:layout_height="49dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="284dp"
         android:onClick="multiply"
         android:text="x"
         android:textSize="20sp"
@@ -57,31 +56,29 @@
 
     <EditText
         android:id="@+id/topText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_width="242dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="200dp"
         android:ems="10"
-        android:hint="Input first number here"
+        android:hint="Enter number"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/bottomText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
+        android:layout_width="243dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="268dp"
         android:ems="10"
-        android:hint="Input first number here"
+        android:hint="Enter number"
         android:inputType="textPersonName"
         android:text=""
         android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,22 +86,23 @@
         android:id="@+id/answerBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="504dp"
-        android:background="#7DE36B"
+        android:layout_marginTop="336dp"
+        android:background="#BEF0F6"
+        android:textColor="#0B0A0A"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/equals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="384dp"
-        android:text="="
+        android:layout_width="256dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="264dp"
+        android:text="__________"
         android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,7 +112,31 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="59dp"
         android:text="Calculator App"
+        android:textColor="#232020"
         android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="284dp"
+        android:text=""
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/popUpMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:text="Welcome to Calculator App!"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

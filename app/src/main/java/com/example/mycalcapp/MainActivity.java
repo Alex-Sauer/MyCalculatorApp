@@ -8,29 +8,40 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.InputMismatchException;
 
+public class MainActivity extends AppCompatActivity {
+    int operation = 5;
+    double total=0;
+    int num2;
+    int num1;
+    TextView operationText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        operationText= (TextView) findViewById(R.id.operation);
     }
-    int operation = 5;
-    int total=0;
+
+
     public void add (View view){
         operation=1;
+        operationText.setText("+");
         solve(view);
     }
     public void sub (View view){
         operation=2;
+        operationText.setText("-");
         solve(view);
     }
     public void multiply (View view){
-        operation=2;
+        operation=3;
+        operationText.setText("x");
         solve(view);
     }
     public void divide (View view){
-        operation=2;
+        operation=4;
+        operationText.setText("/");
         solve(view);
     }
     public void solve(View view){
@@ -40,8 +51,14 @@ public class MainActivity extends AppCompatActivity {
         TextView botTxt = findViewById(R.id.bottomText);
         String topNum = topTxt.getText().toString();
         String botNum = botTxt.getText().toString();
-        int num1= Integer.parseInt(topNum);
-        int num2= Integer.parseInt(botNum);
+        try {
+            num1= Integer.parseInt(topNum);
+            num2= Integer.parseInt(botNum);
+        }catch (InputMismatchException e){
+            TextView textView = (TextView) findViewById(R.id.popUpMessages);
+            textView.setText("Please make sure to enter a whole number");//set the text in edit text
+        }
+
         if (operation==1){
             //add
             total = num1+num2;
@@ -51,10 +68,16 @@ public class MainActivity extends AppCompatActivity {
         }else if(operation==3){
             total = num1*num2;
         }else{
-            total = num1/num2;
+            total = (double)num1/num2;
         }
 
         String wordTotal = ("" + total);
+        if (operation!=4 && wordTotal.charAt(wordTotal.length()-1)==0){
+            wordTotal = wordTotal.substring(0,wordTotal.length()-2);
+        }
+        if (operation==4 && wordTotal.length()>7){
+            wordTotal = wordTotal.substring(0,7);
+        }
         EditText editText = (EditText) findViewById(R.id.answerBox);
         editText.setText(wordTotal);//set the text in edit text
     }
