@@ -6,6 +6,8 @@
     android:background="@color/lavender"
     tools:context=".MainActivity">
 
+
+
     <Button
         android:id="@+id/divide"
         android:layout_width="63dp"
@@ -54,6 +56,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Digits was found online and is used to limit what
+    the user is able to input in the text boxes
+    Input type changes the keyboard that pops up for the user... also found online-->
+
     <EditText
         android:id="@+id/topText"
         android:layout_width="242dp"
@@ -61,8 +67,9 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="200dp"
         android:ems="10"
+        android:digits="1234567890."
         android:hint="Enter number"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +81,10 @@
         android:layout_height="57dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="268dp"
+        android:digits="1234567890."
         android:ems="10"
         android:hint="Enter number"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,8 +131,8 @@
         android:id="@+id/operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="276dp"
         android:text=""
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,12 +142,12 @@
         android:id="@+id/popUpMessages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="400dp"
         android:text="Welcome to Calculator App!"
-        android:textSize="25dp"
         android:textColor="@color/darkTeal"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
