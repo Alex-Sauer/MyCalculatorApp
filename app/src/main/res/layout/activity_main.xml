@@ -109,7 +109,7 @@
         android:layout_height="66dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="264dp"
-        android:text="__________"
+        android:text="___________"
         android:textSize="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

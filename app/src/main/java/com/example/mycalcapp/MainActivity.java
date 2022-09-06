@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void add (View view){
+
         operation=1;
         operationText.setText("+");
         solve(view);
