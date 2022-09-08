@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         operationText= (TextView) findViewById(R.id.operation);
     }
-
+//this is a comment
 
     public void add (View view){
 
